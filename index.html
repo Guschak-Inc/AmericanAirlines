@@ -3,6 +3,7 @@
 <head>
   <title>jQuery Gallery</title>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+   <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 </head>
 <body>
   <div class="container clearfix">
@@ -28,7 +29,7 @@
   </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
+  <script src="fancybox/jquery.fancybox.js"></script>
 
   <script>
     $(function() {
@@ -43,7 +44,10 @@
           $(this).fadeIn(550);
         });
       });
-
+      
+      $('.previewFull').on('click', function(){
+        $.fancybox.open("images/fashion/top1large.jpg");
+      });
 
 
     });
