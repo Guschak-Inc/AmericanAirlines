@@ -19,21 +19,30 @@
 
       <div class="full">
           <!-- first image is viewable to start -->
-          <img src="images/fashion/top1large.jpg" />
+          <img src="images/fashion/top1large.jpg" class="previewFull"/>
       </div>
+
+
 
     </div>
   </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
+
   <script>
     $(function() {
-      $('.preview a').on('click',function(e){
-        var src = $(this).data('src');
-        $('img.previewFull').attr('src',src);
 
+      $('.previews a').on('click',function(e){
+        var beard = this.dataset.full;
+        $('.selected').removeClass();
+        $(this).addClass('selected');
+        $('img.previewFull').removeAttr('src');
+        $('img.previewFull').attr('src', beard);
       });
+
+
+
     });
   </script>
 </body>

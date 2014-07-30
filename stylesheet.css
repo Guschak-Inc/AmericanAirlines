@@ -50,6 +50,10 @@ body {
     margin-bottom: 10px;
 }
 
+.gallery .previews img {
+  display: block;
+}
+
 .gallery .full, .gallery .full img {
     height: 600px;
 }
