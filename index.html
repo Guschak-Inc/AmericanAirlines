@@ -34,10 +34,14 @@
     $(function() {
 
       $('.previews a').on('click',function(e){
-        var beard = this.dataset.full;
+        e.preventDefault();
+        var beard = $(this).data('full');
         $('.selected').removeClass();
         $(this).addClass('selected');
         $('img.previewFull').attr('src', beard);
+        $('img.previewFull').hide(0, function(){
+          $(this).fadeIn();
+        });
       });
 
 
