@@ -41,12 +41,37 @@ img {
   border: 5px solid #000;
 }
 
-.main-gal {
+.mega-wrap {
   width: 70%;
   float: left;
-  padding: 20px;
+  padding: 25px;
   padding-right: 40px;
   border-right: 5px solid #3F3F3C;
+}
+
+.main-gal {
+  width: 65%;
+  float: right;
+  padding: 25px;
+  padding-left: 50px;
+}
+
+
+.previews {
+  width: 35%;
+  float: left;
+}
+
+.thumbs {
+  width: 100%;
+}
+
+.leftThumbs, 
+.rightThumbs {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  padding-top:25px;
 }
 
 .full img {
@@ -58,19 +83,6 @@ aside {
   float: right;
   padding: 20px;
   text-align: center;
-}
-
-.previews,
-.thumbs {
-  width: 100%;
-  margin-top: 25px;
-}
-
-.leftThumbs, 
-.rightThumbs {
-  float: left;
-  width: 50%;
-  padding: 5px;
 }
 
 .logo img {
