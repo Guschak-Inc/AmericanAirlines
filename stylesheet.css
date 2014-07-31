@@ -48,7 +48,7 @@ img {
   max-width: 100%;
   display: block;
   margin: 10px;
-  border: 2px solid #C4C6B8;
+  border: 5px solid #000;
 }
 .logo img {
   border: none;
