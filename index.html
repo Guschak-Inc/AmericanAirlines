@@ -14,8 +14,8 @@
         <img src="images/icon_4844.png">
       </div>
       <div class="previews">
-          <a href="#" class="selected" data-full="images/fashion/top1large.jpg"><img src="images/fashion/top1small.jpg" /></a>
-          <a href="#" data-full="images/fashion/top2large.jpg"><img src="images/fashion/top2small.jpg" /></a>
+          <a href="#" class="selected" data-full="images/fashion/top1large.jpg" data-huge="images/fashion/top1huge.jpg"><img src="images/fashion/top1small.jpg" /></a>
+          <a href="#" data-full="images/fashion/top2large.jpg" data-huge="images/fashion/top2huge.jpg"><img src="images/fashion/top2small.jpg" /></a>
           <a href="#" data-full="images/fashion/top3large.jpg"><img src="images/fashion/top3small.jpg" /></a>
           <a href="#" data-full="images/fashion/top4large.jpg"><img src="images/fashion/top4small.jpg" /></a>
           <a href="#" data-full="images/fashion/top5large.jpg"><img src="images/fashion/top5small.jpg" /></a>
@@ -25,7 +25,7 @@
       <div class="main-gal">
       <div class="full">
           <!-- first image is viewable to start -->
-          <!--<a id="biggie" href="">--><img class="previewFull" src="images/fashion/top1large.jpg" /><!--</a>-->
+          <!--<a id="biggie" href="">--><img class="previewFull" data-huge="images/fashion/top1huge.jpg" src="images/fashion/top1large.jpg" /><!--</a>-->
       </div>
 
     </div>
@@ -34,6 +34,8 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="assets/js/fancybox/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.mlens-1.4/jquery.mlens-1.4.js"></script>
+  
 
   <script>
     $(function() {
@@ -41,17 +43,29 @@
       $('.previews a').on('click',function(e){
         e.preventDefault();
         var bigPic = $(this).data('full');
+        var hugePic = $(this).data('huge');
         $('.selected').removeClass();
         $(this).addClass('selected');
         $('img.previewFull').attr('src', bigPic);
         $('img.previewFull').hide(0, function(){
           $(this).fadeIn(550);
         });
+        $('img.previewFull').attr('data-huge', hugePic);
       });
       
       $('.previewFull').on('click', function(){
         var fancymotherfucker = $('.previewFull').attr('src');
         $.fancybox.open(fancymotherfucker);
+      });
+
+      $('.previewFull').mlens({
+        imgSrc: $('.previewFull').attr("data-huge"),
+        lensShape: "circle",
+        lensSize: 180,
+        borderSize: 0,
+        borderColor: "#fff",
+        overlayAdapt: false,
+        zoomLevel: 1
       });
 
 
