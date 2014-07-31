@@ -16,9 +16,9 @@
       <div class="previews">
           <a href="#" class="selected" data-full="images/fashion/top1large.jpg" data-huge="images/fashion/top1huge.jpg"><img src="images/fashion/top1small.jpg" /></a>
           <a href="#" data-full="images/fashion/top2large.jpg" data-huge="images/fashion/top2huge.jpg"><img src="images/fashion/top2small.jpg" /></a>
-          <a href="#" data-full="images/fashion/top3large.jpg"><img src="images/fashion/top3small.jpg" /></a>
-          <a href="#" data-full="images/fashion/top4large.jpg"><img src="images/fashion/top4small.jpg" /></a>
-          <a href="#" data-full="images/fashion/top5large.jpg"><img src="images/fashion/top5small.jpg" /></a>
+          <a href="#" data-full="images/fashion/top3large.jpg" data-huge="images/fashion/top3huge.jpg"><img src="images/fashion/top3small.jpg" /></a>
+          <a href="#" data-full="images/fashion/top4large.jpg" data-huge="images/fashion/top4huge.jpg"><img src="images/fashion/top4small.jpg" /></a>
+          <a href="#" data-full="images/fashion/top5large.jpg" data-huge="images/fashion/top5huge.jpg"><img src="images/fashion/top5small.jpg" /></a>
       </div>
       </aside>
 
@@ -56,18 +56,16 @@
       $('.previewFull').on('click', function(){
         var fancymotherfucker = $('.previewFull').attr('src');
         $.fancybox.open(fancymotherfucker);
+        $('.fancybox-inner').mlens({
+          imgSrc: $('.previewFull').attr("data-huge"),
+          lensShape: "circle",
+          lensSize: 180,
+          borderSize: 0,
+          borderColor: "#fff",
+          overlayAdapt: false,
+          zoomLevel: 1
+        });
       });
-
-      $('.previewFull').mlens({
-        imgSrc: $('.previewFull').attr("data-huge"),
-        lensShape: "circle",
-        lensSize: 180,
-        borderSize: 0,
-        borderColor: "#fff",
-        overlayAdapt: false,
-        zoomLevel: 1
-      });
-
 
     });
 
