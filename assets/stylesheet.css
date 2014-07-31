@@ -37,7 +37,7 @@ h1 {
 img {
   max-width: 100%;
   display: block;
-  margin: 10px;
+  margin: 10px auto;
   border: 5px solid #000;
 }
 
@@ -64,9 +64,17 @@ aside {
   margin: 0 15%;
 }*/
 
+.previews,
+.thumbs {
+  width: 100%;
+  margin-top: 25px;
+}
+
 .leftThumbs, 
 .rightThumbs {
   float: left;
+  width: 50%;
+  padding: 5px;
 }
 
 .logo img {
