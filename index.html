@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>jQuery Gallery</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 
 </head>
@@ -40,17 +40,18 @@
 
       $('.previews a').on('click',function(e){
         e.preventDefault();
-        var beard = $(this).data('full');
+        var bigPic = $(this).data('full');
         $('.selected').removeClass();
         $(this).addClass('selected');
-        $('img.previewFull').attr('src', beard);
+        $('img.previewFull').attr('src', bigPic);
         $('img.previewFull').hide(0, function(){
           $(this).fadeIn(550);
         });
       });
       
       $('.previewFull').on('click', function(){
-        $.fancybox.open("images/fashion/top1large.jpg");
+        var fancymotherfucker = $('.previewFull').attr('src');
+        $.fancybox.open(fancymotherfucker);
       });
 
 
