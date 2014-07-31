@@ -67,11 +67,22 @@
   </div> <!-- /.container -->
  
   <section>
-    <div class="about clearfix">
+    <div class="about">
 
-      <a href="#">
-        <img src="http://placekitten.com/200" alt="A schedule of when photos were taken">
-      </a>
+      <div class="aboutPrev clearfix">
+        <a href="#" class="" data-full="">
+          <img src="http://placecage.com/200/200" alt="">
+        </a>
+
+        <a href="#" data-full="">
+          <img src="http://fillmurray.com/200/200" alt="A schedule of when photos were taken">
+        </a>
+
+        <a href="#" data-full="">
+          <img src="http://nicenicejpg.com/200" alt="A schedule of when photos were taken">
+        </a>
+
+      </div> /.aboutPrev
       
     </div> <!-- /.wrapper -->
   </section>
@@ -89,27 +100,27 @@
       $('.previews a').on('click',function(e){
         e.preventDefault();
         var bigPic = $(this).data('full');
-        var hugePic = $(this).data('huge');
+        var lightPic = $(this).data('light');
         $('.selected').removeClass();
         $(this).addClass('selected');
         $('img.previewFull').attr('src', bigPic);
         $('img.previewFull').hide(0, function(){
           $(this).fadeIn(550);
         });
-        $('img.previewFull').attr('data-huge', hugePic);
+        $('img.previewFull').attr('data-light', lightPic);
       });
       
       $('.previewFull').on('click', function(){
-        var fancymotherfucker = $('.previewFull').attr('src');
+        var fancymotherfucker = $('.previewFull').attr('data-light');
         $.fancybox.open(fancymotherfucker);
         $('.fancybox-inner').mlens({
-          imgSrc: $('.previewFull').attr("src"),
+          imgSrc: $('.previewFull').attr("data-light"),
           lensShape: "circle",
           lensSize: 180,
           borderSize: 0,
           borderColor: "#fff",
           overlayAdapt: false,
-          zoomLevel: 5
+          zoomLevel: 3
         });
       });
 
