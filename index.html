@@ -22,43 +22,43 @@
     <div class="mega-wrap">
       <div class="main-gal">
         <div class="full">
-          <!-- first image is viewable to start -->
-          <!--<a id="biggie" href="">--><img class="previewFull" data-light="" src="images/fashion/questionmark.jpg"><!--</a>-->
+          <!-- Question mark in place of large image to start -->
+          <img class="previewFull" data-light="" src="images/fashion/questionmark.jpg">
         </div> <!-- /.full -->
       </div> <!-- /.main-gal -->
 
       <div class="previews">
 
-          <div class="thumbs">
+          <div class="thumbs" id="notFingers">
             <div class="leftThumbs">
 
-              <a href="#" class="selected" data-full="images/fashion/1med.jpg" data-light="images/fashion/1large-grainy.jpg">
-                <img src="images/fashion/1small.jpg">
+              <a href="#" class="selected" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/1small.jpg" data-full="images/fashion/1med.jpg" data-light="images/fashion/1large-grainy.jpg">
+                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
               </a>
 
-              <a href="#" data-full="images/fashion/2medium.jpg" data-light="images/fashion/2large-grainy.jpg">
-                <img src="images/fashion/2small.jpg">
+              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/2small.jpg" data-full="images/fashion/2medium.jpg" data-light="images/fashion/2large-grainy.jpg">
+                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
               </a>
 
-              <a href="#" data-full="images/fashion/3medium.jpg" data-light="images/fashion/3large-grainy.jpg">
-                <img src="images/fashion/3small.jpg">
+              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/3small.jpg" data-full="images/fashion/3medium.jpg" data-light="images/fashion/3large-grainy.jpg">
+                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
               </a>
 
             </div> <!-- /.leftThumbs -->
             
             <div class="rightThumbs">
 
-              <a href="#" data-full="images/fashion/4medium.jpg" data-light="images/fashion/4large-grainy.jpg">
-                <img src="images/fashion/4small.jpg">
+              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/4small.jpg" data-full="images/fashion/4medium.jpg" data-light="images/fashion/4large-grainy.jpg">
+                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
               </a>
               
-              <a href="#" data-full="images/fashion/5medium.jpg" data-light="images/fashion/5large-noise.jpg">
-                <img src="images/fashion/5small.jpg">
+              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/5small.jpg" data-full="images/fashion/5medium.jpg" data-light="images/fashion/5large-noise.jpg">
+                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
               </a>
 
               <!-- Below is a copy of the 5th image just to have 6 for page arrangement -->
-              <a href="#" data-full="images/fashion/6medium.jpg" data-light="images/fashion/6large-grainy.jpg">
-                <img src="images/fashion/6small.jpg">
+              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/6small.jpg" data-full="images/fashion/6medium.jpg" data-light="images/fashion/6large-grainy.jpg">
+                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
               </a>
 
             </div> <!-- /.rightThumbs -->
@@ -99,12 +99,22 @@
   <script>
     $(function() {
 
-      $('.previews a').on('click',function(e){
+      $('#notFingers a').on('mouseenter', function(){
+        var secretThumb = $(this).data('secret');
+        $(this).find('.visibleThumb').attr('src', secretThumb);
+      }).on('mouseleave', function(){
+        var coverThumb = $(this).data('cover');
+        $(this).find('.visibleThumb').attr('src', coverThumb);
+      });
+
+      $('#notFingers a').on('click',function(e){
         e.preventDefault();
         var bigPic = $(this).data('full');
         var lightPic = $(this).data('light');
+        // var secretThumb = $(this).data('secret');
         $('.selected').removeClass();
         $(this).addClass('selected');
+        // $(this).find('.visibleThumb').attr('src', secretThumb);
         $('img.previewFull').attr('src', bigPic);
         $('img.previewFull').hide(0, function(){
           $(this).fadeIn(550);
