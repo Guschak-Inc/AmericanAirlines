@@ -129,16 +129,20 @@
 
       <div class="aboutPrev clearfix">
 
-        <a href="#" class="" data-full="">
-          <img src="http://placecage.com/200/200" alt="">
+        <a href="#" class="FUCK" data-full="images/fashion/1large-grainy.jpg">
+          <img class="aboutThumb" src="http://placecage.com/200/200" alt="A schedule of when photos were taken">
         </a>
 
         <a href="#" data-full="">
-          <img src="http://fillmurray.com/200/200" alt="A schedule of when photos were taken">
+          <img src="http://fillmurray.com/200/200" alt="Guss">
         </a>
 
         <a href="#" data-full="">
-          <img src="http://nicenicejpg.com/200" alt="A schedule of when photos were taken">
+          <img src="http://nicenicejpg.com/200" alt="Gerchak">
+        </a>
+
+        <a href="#" data-full="">
+          <img src="http://placesheen.com/200/200" alt="The man of the hour">
         </a>
 
       </div> <!-- /.aboutPrev -->
@@ -203,6 +207,11 @@
           overlayAdapt: false,
           zoomLevel: .78
         });
+      });
+
+      $('.FUCK').on('click', function(){
+        var aboutPic = $('.FUCK').attr('data-full');
+        $fancybox.open(aboutPic);
       });
 
     });
