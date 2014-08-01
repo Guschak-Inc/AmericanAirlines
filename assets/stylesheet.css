@@ -37,7 +37,7 @@ h1 {
 img {
   max-width: 100%;
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
   border: 5px solid #000;
 }
 
@@ -72,6 +72,29 @@ img {
   width: 50%;
   padding: 5px;
   padding-top:25px;
+  /*position: relative;*/
+}
+
+.aThumb {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.coverThumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  /*opacity: 0;*/
+}
+
+.aThumb:hover .coverThumb{
+  opacity: 0;
+}
+
+.disappear {
+  opacity: 0;
 }
 
 .full img {

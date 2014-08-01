@@ -32,34 +32,88 @@
           <div class="thumbs" id="notFingers">
             <div class="leftThumbs">
 
-              <a href="#" class="selected" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/1small.jpg" data-full="images/fashion/1med.jpg" data-light="images/fashion/1large-grainy.jpg">
-                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
-              </a>
+              <div class="aThumb">
+                <a href="#" class="selected" data-full="images/fashion/1med.jpg" data-light="images/fashion/1large-grainy.jpg">
+                  
+                  <div class="secretThumb">
+                    <img class="visibleThumb" src="images/fashion/1small.jpg">
+                  </div> <!-- /.secretThumb -->
+                  <div class="coverThumb">
+                    <img src="images/fashion/questionmark.jpg" alt="">
+                  </div> <!-- /.coverThumb -->
 
-              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/2small.jpg" data-full="images/fashion/2medium.jpg" data-light="images/fashion/2large-grainy.jpg">
-                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
-              </a>
+                </a>
+              </div> <!-- /.aThumb -->
 
-              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/3small.jpg" data-full="images/fashion/3medium.jpg" data-light="images/fashion/3large-grainy.jpg">
-                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
-              </a>
+              <div class="aThumb">
+                <a href="#" data-full="images/fashion/2medium.jpg" data-light="images/fashion/2large-grainy.jpg">
+                  
+                  <div class="secretThumb">
+                    <img class="visibleThumb" src="images/fashion/2small.jpg">
+                  </div> <!-- /.secretThumb -->
+                  <div class="coverThumb">
+                    <img src="images/fashion/questionmark.jpg" alt="">
+                  </div> <!-- /.coverThumb -->
+
+                </a>
+              </div> <!-- /.aThumb -->
+
+              <div class="aThumb">
+                <a href="#" data-full="images/fashion/3medium.jpg" data-light="images/fashion/3large-grainy.jpg">
+                  
+                  <div class="secretThumb">
+                    <img class="visibleThumb" src="images/fashion/3small.jpg">
+                  </div> <!-- /.secretThumb -->
+                  <div class="coverThumb">
+                    <img src="images/fashion/questionmark.jpg" alt="">
+                  </div> <!-- /.coverThumb -->
+
+                </a>
+              </div> <!-- /.aThumb -->
 
             </div> <!-- /.leftThumbs -->
             
             <div class="rightThumbs">
 
-              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/4small.jpg" data-full="images/fashion/4medium.jpg" data-light="images/fashion/4large-grainy.jpg">
-                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
-              </a>
+              <div class="aThumb">
+                <a href="#" data-full="images/fashion/4medium.jpg" data-light="images/fashion/4large-grainy.jpg">
+                  
+                  <div class="secretThumb">
+                    <img class="visibleThumb" src="images/fashion/4small.jpg">
+                  </div> <!-- /.secretThumb -->
+                  <div class="coverThumb">
+                    <img src="images/fashion/questionmark.jpg" alt="">
+                  </div> <!-- /.coverThumb -->
+
+                </a>
+              </div> <!-- /.aThumb -->
               
-              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/5small.jpg" data-full="images/fashion/5medium.jpg" data-light="images/fashion/5large-noise.jpg">
-                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
-              </a>
+              <div class="aThumb">
+                <a href="#" data-full="images/fashion/5medium.jpg" data-light="images/fashion/5large-noise.jpg">
+                  
+                  <div class="secretThumb">
+                    <img class="visibleThumb" src="images/fashion/5small.jpg">
+                  </div> <!-- /.secretThumb -->
+                  <div class="coverThumb">
+                    <img src="images/fashion/questionmark.jpg" alt="">
+                  </div> <!-- /.coverThumb -->
+
+                </a>
+              </div> <!-- /.aThumb -->
 
               <!-- Below is a copy of the 5th image just to have 6 for page arrangement -->
-              <a href="#" data-cover="images/fashion/questionmark.jpg" data-secret="images/fashion/6small.jpg" data-full="images/fashion/6medium.jpg" data-light="images/fashion/6large-grainy.jpg">
-                <img class="visibleThumb" src="images/fashion/questionmark.jpg">
-              </a>
+              <div class="aThumb">
+                <a href="#" data-full="images/fashion/6medium.jpg" data-light="images/fashion/6large-grainy.jpg">
+                  
+                  <div class="secretThumb">
+                    <img class="visibleThumb" src="images/fashion/6small.jpg">
+                  </div> <!-- /.secretThumb -->
+                  <div class="coverThumb">
+                    <img src="images/fashion/questionmark.jpg" alt="">
+                  </div> <!-- /.coverThumb -->
+
+                </a>
+              </div> <!-- /.aThumb -->
 
             </div> <!-- /.rightThumbs -->
           </div> <!-- /.thumbs -->
@@ -99,22 +153,34 @@
   <script>
     $(function() {
 
-      $('#notFingers a').on('mouseenter', function(){
-        var secretThumb = $(this).data('secret');
-        $(this).find('.visibleThumb').attr('src', secretThumb);
-      }).on('mouseleave', function(){
-        var coverThumb = $(this).data('cover');
-        $(this).find('.visibleThumb').attr('src', coverThumb);
-      });
+      // $('#notFingers a').on('mouseenter', function(){
+      //   var secretThumb = $(this).data('secret');
+      //   $(this).find('.visibleThumb').attr('src', secretThumb);
+      // }).on('mouseleave', function(){
+      //   var coverThumb = $(this).data('cover');
+      //   $(this).find('.visibleThumb').attr('src', coverThumb);
+      // });
+
+      
+      // if($('#notFingers a').on('click')) {
+      //   var coverThumb = $(this).data('cover');
+      //   var secretThumb = $(this).data('secret');
+      //   $('.Carrie').attr('src', coverThumb).removeClass();
+      //   $(this).find('.visibleThumb').attr('src', secretThumb).addClass('safi');
+      // } else if($('#notFingers a').on('mouseleave')) {
+      //   var coverThumb = $(this).data('cover');
+      //   $(this).find('.visibleThumb').attr('src', coverThumb);
+      // };
+
 
       $('#notFingers a').on('click',function(e){
         e.preventDefault();
         var bigPic = $(this).data('full');
         var lightPic = $(this).data('light');
-        // var secretThumb = $(this).data('secret');
+        $('.disappear').removeClass('disappear');
+        $(this).find('.coverThumb').addClass('disappear');
         $('.selected').removeClass();
         $(this).addClass('selected');
-        // $(this).find('.visibleThumb').attr('src', secretThumb);
         $('img.previewFull').attr('src', bigPic);
         $('img.previewFull').hide(0, function(){
           $(this).fadeIn(550);
@@ -132,7 +198,7 @@
           borderSize: 0,
           borderColor: "#fff",
           overlayAdapt: false,
-          zoomLevel: 3
+          zoomLevel: .78
         });
       });
 
