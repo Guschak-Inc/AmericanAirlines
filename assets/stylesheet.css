@@ -64,16 +64,20 @@ img {
 .mega-wrap {
   width: 70%;
   float: left;
-  padding: 25px;
-  padding-right: 40px;
+  padding: 4% 5% 4% 2%;
   border-right: 5px solid #3F3F3C;
 }
 
 .main-gal {
   width: 65%;
   float: right;
-  padding: 25px;
-  padding-left: 50px;
+  /*padding: 3.5%;*/
+  padding-left: 6.5%;
+  /*padding-bottom: 5%;*/
+}
+
+.full {
+  /*width: 95%;*/
 }
 
 
@@ -90,16 +94,20 @@ img {
 .rightThumbs {
   float: left;
   width: 50%;
-  padding: 5px;
-  padding-top:25px;
+  padding: 0 2%;
+  /*padding: 5px;*/
   /*position: relative;*/
 }
 
 .aThumb {
   position: relative;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 31.5%;
   overflow: hidden;
+}
+
+.aThumb:last-child {
+  margin-bottom: 0;
 }
 
 .coverThumb {
