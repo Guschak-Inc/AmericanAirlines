@@ -136,8 +136,33 @@ aside {
 
 .logo img {
   border: none;
+  width: 62%;
 }
 
+.logoPic {
+  margin: 0 auto;
+  position: relative;
+}
+
+.bonus {
+  -webkit-mask-image: url("../images/bonusmask.png");
+  mask-image: url("../images/bonusmask.png");
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.beardIcon {
+  position: absolute;
+  left: 19%;
+  top: 0;
+  transition: all 2s linear;
+  /*transition-delay: 5s;*/
+}
+
+.beardIcon:hover {
+  opacity: 0;
+  transition: all 5s linear 5s;
+}
 
 
 /*
