@@ -94,50 +94,28 @@ img {
   position: relative;
   width: 100%;
   margin-bottom: 31.5%;
-  -webkit-perpective: 800px;
+  overflow: hidden;
 }
 
-.aThumb:last-child {
-  margin-bottom: 0;
-}
-
-.aThumb a {
-  -webkit-transform-style: preserve-3d;
-  transition: all 1s;
-}
-
-.secretThumb,
 .coverThumb {
   position: absolute;
-  display: block;
   top: 0;
   left: 0;
   margin: 0;
   width: 100%;
-  -webkit-backface-visibility: hidden;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
-.secretThumb {
-  -webkit-transform: rotateY(180deg);
+.rightThumbs .aThumb:hover .coverThumb{
+  left: 100%;
 }
 
-.aThumb:hover .secretThumb {
-  -webkit-transform: rotateY(180deg);
-  -webkit-transform: skewX(0);
-}
-
-.aThumb:hover .coverThumb {
-  -webkit-transform: rotateY(180deg);
+.leftThumbs .aThumb:hover .coverThumb {
+  left: -100%;
 }
 
 .disappear {
   opacity: 0;
-}
-
-.appear {
-  -webkit-transform: rotateY(180deg);
-  -webkit-transform: skewX(0);
 }
 
 .full img {
