@@ -40,6 +40,9 @@
               <div class="aThumb">
                 <a href="#" class="selected" data-full="images/fashion/1med.jpg" data-light="images/fashion/1large-grainy.jpg">
                   
+                  <div class="backThumb">
+                    <img src="images/fashion/thumbPlate.jpg">
+                  </div>
                   <div class="secretThumb">
                     <img class="visibleThumb" src="images/fashion/1small.jpg">
                   </div> <!-- /.secretThumb -->
@@ -53,6 +56,9 @@
               <div class="aThumb">
                 <a href="#" data-full="images/fashion/2medium.jpg" data-light="images/fashion/2large-grainy.jpg">
                   
+                  <div class="backThumb">
+                    <img src="images/fashion/thumbPlate.jpg">
+                  </div>
                   <div class="secretThumb">
                     <img class="visibleThumb" src="images/fashion/2small.jpg">
                   </div> <!-- /.secretThumb -->
@@ -66,6 +72,9 @@
               <div class="aThumb">
                 <a href="#" data-full="images/fashion/3medium.jpg" data-light="images/fashion/3large-grainy.jpg">
                   
+                  <div class="backThumb">
+                    <img src="images/fashion/thumbPlate.jpg">
+                  </div>
                   <div class="secretThumb">
                     <img class="visibleThumb" src="images/fashion/3small.jpg">
                   </div> <!-- /.secretThumb -->
@@ -83,6 +92,9 @@
               <div class="aThumb">
                 <a href="#" data-full="images/fashion/4medium.jpg" data-light="images/fashion/4large-grainy.jpg">
                   
+                  <div class="backThumb">
+                    <img src="images/fashion/thumbPlate.jpg">
+                  </div>
                   <div class="secretThumb">
                     <img class="visibleThumb" src="images/fashion/4small.jpg">
                   </div> <!-- /.secretThumb -->
@@ -96,6 +108,9 @@
               <div class="aThumb">
                 <a href="#" data-full="images/fashion/5medium.jpg" data-light="images/fashion/5large-noise.jpg">
                   
+                  <div class="backThumb">
+                    <img src="images/fashion/thumbPlate.jpg">
+                  </div>
                   <div class="secretThumb">
                     <img class="visibleThumb" src="images/fashion/5small.jpg">
                   </div> <!-- /.secretThumb -->
@@ -109,6 +124,9 @@
               <div class="aThumb">
                 <a href="#" data-full="images/fashion/6medium.jpg" data-light="images/fashion/6large-grainy.jpg">
                   
+                  <div class="backThumb">
+                    <img src="images/fashion/thumbPlate.jpg">
+                  </div>
                   <div class="secretThumb">
                     <img class="visibleThumb" src="images/fashion/6small.jpg">
                   </div> <!-- /.secretThumb -->
@@ -190,6 +208,8 @@
         var lightPic = $(this).data('light');
         $('.disappear').removeClass('disappear');
         $(this).find('.coverThumb').addClass('disappear');
+        $('.appear').removeClass('appear');
+        $(this).find('.secretThumb').addClass('appear');
         $('.selected').removeClass();
         $(this).addClass('selected');
         $('img.previewFull').attr('src', bigPic);

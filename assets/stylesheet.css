@@ -103,21 +103,49 @@ img {
   position: relative;
   width: 100%;
   margin-bottom: 31.5%;
-  overflow: hidden;
+  -webkit-perpective: 800px;
 }
 
 .aThumb:last-child {
   margin-bottom: 0;
 }
 
+.aThumb a {
+  -webkit-transform-style: preserve-3d;
+  transition: all 1s;
+}
+
+.secretThumb,
 .coverThumb {
   position: absolute;
+  /*z-index: 5000;*/
+  display: block;
   top: 0;
   left: 0;
   margin: 0;
   width: 100%;
-  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+  transition: all 1s;
 }
+
+.secretThumb {
+  -webkit-transform: rotateY(180deg);
+}
+
+.aThumb:hover .secretThumb/*,
+.aThumb:hover .coverThumb*/ {
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform: skewX(0);
+}
+
+.aThumb:hover .coverThumb {
+  -webkit-transform: rotateY(180deg);
+}
+
+.aThumb:hover .secretThumb {
+  /*z-index: 6000;*/
+}
+/*
 
 .leftThumbs .aThumb:hover .coverThumb{
   left: -100%;
@@ -125,10 +153,16 @@ img {
 
 .rightThumbs .aThumb:hover .coverThumb{
   left: 100%;
-}
+}*/
 
 .disappear {
   opacity: 0;
+}
+
+.appear {
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform: skewX(0);
+  /*z-index: 6000;*/
 }
 
 .full img {
