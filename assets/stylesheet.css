@@ -71,15 +71,8 @@ img {
 .main-gal {
   width: 65%;
   float: right;
-  /*padding: 3.5%;*/
   padding-left: 6.5%;
-  /*padding-bottom: 5%;*/
 }
-
-.full {
-  /*width: 95%;*/
-}
-
 
 .previews {
   width: 35%;
@@ -95,8 +88,6 @@ img {
   float: left;
   width: 50%;
   padding: 0 2%;
-  /*padding: 5px;*/
-  /*position: relative;*/
 }
 
 .aThumb {
@@ -118,7 +109,6 @@ img {
 .secretThumb,
 .coverThumb {
   position: absolute;
-  /*z-index: 5000;*/
   display: block;
   top: 0;
   left: 0;
@@ -132,8 +122,7 @@ img {
   -webkit-transform: rotateY(180deg);
 }
 
-.aThumb:hover .secretThumb/*,
-.aThumb:hover .coverThumb*/ {
+.aThumb:hover .secretThumb {
   -webkit-transform: rotateY(180deg);
   -webkit-transform: skewX(0);
 }
@@ -142,19 +131,6 @@ img {
   -webkit-transform: rotateY(180deg);
 }
 
-.aThumb:hover .secretThumb {
-  /*z-index: 6000;*/
-}
-/*
-
-.leftThumbs .aThumb:hover .coverThumb{
-  left: -100%;
-}
-
-.rightThumbs .aThumb:hover .coverThumb{
-  left: 100%;
-}*/
-
 .disappear {
   opacity: 0;
 }
@@ -162,7 +138,6 @@ img {
 .appear {
   -webkit-transform: rotateY(180deg);
   -webkit-transform: skewX(0);
-  /*z-index: 6000;*/
 }
 
 .full img {
@@ -198,7 +173,6 @@ aside {
   left: 19%;
   top: 0;
   transition: all 2s linear;
-  /*transition-delay: 5s;*/
 }
 
 .beardIcon:hover {

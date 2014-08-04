@@ -182,26 +182,6 @@
   <script>
     $(function() {
 
-      // $('#notFingers a').on('mouseenter', function(){
-      //   var secretThumb = $(this).data('secret');
-      //   $(this).find('.visibleThumb').attr('src', secretThumb);
-      // }).on('mouseleave', function(){
-      //   var coverThumb = $(this).data('cover');
-      //   $(this).find('.visibleThumb').attr('src', coverThumb);
-      // });
-
-      
-      // if($('#notFingers a').on('click')) {
-      //   var coverThumb = $(this).data('cover');
-      //   var secretThumb = $(this).data('secret');
-      //   $('.Carrie').attr('src', coverThumb).removeClass();
-      //   $(this).find('.visibleThumb').attr('src', secretThumb).addClass('safi');
-      // } else if($('#notFingers a').on('mouseleave')) {
-      //   var coverThumb = $(this).data('cover');
-      //   $(this).find('.visibleThumb').attr('src', coverThumb);
-      // };
-
-
       $('#notFingers a').on('click',function(e){
         e.preventDefault();
         var bigPic = $(this).data('full');
@@ -233,26 +213,8 @@
         });
       });
 
-      // $('.FUCK').on('click', function(){
-      //   var aboutPic = $('.FUCK').attr('data-full');
-      //   $fancybox.open(aboutPic);
-      // });
-
     });
 
-
-    /* attach a delegated event
-    $( ".previewFull a" ).on( "click", "a", function() {
-        console.log( $( this ).attr() );
-    }); */
-  
-
-
-/*    $(function() {
-      $('.previews a').on('click',function(e){
-        var src = $(this).data('src');
-        $('img.previewFull').attr('src',$(this).attr('src').replace();
-          */
   </script>
 </body>
 </html>
